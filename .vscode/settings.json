@@ -1,11 +1,17 @@
 {
+  "workbench.colorTheme": "Tokyo Night",
   "files.eol": "\n",
   "files.associations": {
     "*.csv": "csv (semicolon)"
   },
-  "material-icon-theme.activeIconPack": "nest",
+
+  "npm.packageManager": "pnpm",
+
   "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.experimental.useTsgo": true,
+
   "eslint.useFlatConfig": true,
+
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -15,9 +21,12 @@
     "source.addMissingImports.ts": "explicit",
     "source.removeUnused.ts": "explicit"
   },
+
+  "material-icon-theme.activeIconPack": "nest",
+
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#2f7c47",
     "activityBar.background": "#2f7c47",
+    "activityBar.activeBackground": "#2f7c47",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
     "activityBarBadge.background": "#422c74",
@@ -34,10 +43,11 @@
     "titleBar.inactiveBackground": "#21573299",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "npm.packageManager": "pnpm",
+
   "peacock.color": "#215732",
-  "typescript.experimental.useTsgo": true,
+
   "asciidoc.antora.showEnableAntoraPrompt": false,
+
   "vitest.nodeEnv": {
     "NODE_TLS_REJECT_UNAUTHORIZED": "0"
   }
