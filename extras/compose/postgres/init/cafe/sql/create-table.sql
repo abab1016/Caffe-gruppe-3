@@ -63,8 +63,10 @@ CREATE TABLE IF NOT EXISTS cafe (
     kategorie       integer NOT NULL CHECK (kategorie >= 1 AND kategorie <= 9),
                   -- https://www.postgresql.org/docs/current/datatype-datetime.html
     gruendungsdatum date NOT NULL,
+                  -- https://www.postgresql.org/docs/current/datatype-enum.html
+    kaffeeart       kaffeeart,
                   -- https://www.postgresql.org/docs/current/datatype-json.html
-    kaffeesorten    kaffeeart[] DEFAULT ARRAY[]::kaffeeart[],
+    kaffeesorten    jsonb DEFAULT '[]'::jsonb,
     username        text,
                   -- https://www.postgresql.org/docs/current/datatype-datetime.html
     erzeugt         timestamp NOT NULL DEFAULT NOW(),

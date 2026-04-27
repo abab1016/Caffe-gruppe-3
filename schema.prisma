@@ -30,7 +30,7 @@ datasource db {
 model Produkt {
   id       Int     @id @default(autoincrement())
   name     String
-  preis    Decimal @db.Decimal(8, 2)
+  preis    Decimal @db.Decimal(10, 2)
   waehrung String
   cafeId   Int     @map("cafe_id")
   /// https://www.prisma.io/docs/orm/prisma-schema/data-model/relations/referential-actions#referential-action-defaults
@@ -52,8 +52,7 @@ model Cafe {
   username        String?
   kategorie       Int
   kaffeeart       Kaffeeart?
-  gruendungsdatum DateTime?    @db.Date
-  homepage        String?
+  gruendungsdatum DateTime     @db.Date
   /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#json
   kaffeesorten    Json?
   erzeugt         DateTime     @default(now()) @db.Timestamp(6)
