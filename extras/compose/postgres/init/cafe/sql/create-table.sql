@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS cafe (
                   -- https://www.postgresql.org/docs/current/datatype-datetime.html
     letzte_renovierung date,
                   -- https://www.postgresql.org/docs/current/datatype-json.html
-    kaffeesorten       jsonb DEFAULT '[]'::jsonb,
+    kaffeesorten       jsonb,
     username           text,
                   -- https://www.postgresql.org/docs/current/datatype-datetime.html
     erzeugt            timestamp NOT NULL DEFAULT NOW(),

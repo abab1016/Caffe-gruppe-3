@@ -1,7 +1,7 @@
 id;version;name;email;kategorie;gruendungsdatum;kaffeeart;bewertung;geoeffnet;letzte_renovierung;kaffeesorten;username;erzeugt;aktualisiert
-1;0;AdminCafe;admin@cafe.com;1;2025-01-01;;4.50;true;;null;admin;2025-01-01 00:00:00;2025-01-01 00:00:00
+1;0;AdminCafe;admin@cafe.com;1;2025-01-01;;4.50;true;;;admin;2025-01-01 00:00:00;2025-01-01 00:00:00
 20;0;CafeBerlin;cafeberlin@cafe.de;5;2025-02-10;ESPRESSO;4.20;true;2024-08-15;"[""ESPRESSO""]";cafeberlin;2025-02-10 00:00:00;2025-02-10 00:00:00
 30;0;CafeMunich;cafemunich@cafe.de;7;2025-03-15;LATTE_MACCHIATO;4.80;true;2025-01-20;"[""LATTE_MACCHIATO"",""CAPPUCCINO""]";cafemunich;2025-03-15 00:00:00;2025-03-15 00:00:00
 40;0;CafeHamburg;cafehamburg@cafe.de;6;2025-04-20;AMERICANO;3.90;false;;"[""AMERICANO""]";cafehamburg;2025-04-20 00:00:00;2025-04-20 00:00:00
 50;0;CafeCologne;cologne@cafe.de;8;2025-05-05;FLAT_WHITE;4.50;true;2024-11-10;"[""ESPRESSO"",""FLAT_WHITE""]";cologne;2025-05-05 00:00:00;2025-05-05 00:00:00
-60;0;CafeFrankfurt;frankfurt@cafe.de;4;2025-06-01;;3.50;true;;null;frankfurt;2025-06-01 00:00:00;2025-06-01 00:00:00
+60;0;CafeFrankfurt;frankfurt@cafe.de;4;2025-06-01;;3.50;true;;;frankfurt;2025-06-01 00:00:00;2025-06-01 00:00:00

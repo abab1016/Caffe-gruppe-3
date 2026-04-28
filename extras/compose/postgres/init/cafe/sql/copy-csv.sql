@@ -13,7 +13,7 @@
 -- You should have received a copy of the GNU General Public License
 -- along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
--- Aufruf:   psql --dbname=buch --username=postgres --file=/init/buch/sql/copy-csv.sql
+-- Aufruf:   psql --dbname=cafe --username=postgres --file=/init/cafe/sql/copy-csv.sql
 
 SET search_path TO cafe;
 
