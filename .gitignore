@@ -26,6 +26,7 @@ extras/compose/postgres/init/tls/server.crt
 extras/bruno/javascript/environments
 src/config/resources/tls/key.pem
 src/config/resources/postgresql/server.crt
+
 src/beispiele.ts
 src/beispiele-write.ts
 test/lasttest-locust/__pycache__
