@@ -1,0 +1,88 @@
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#generator
+generator client {
+  /// Default ab Prisma 6.18
+  /// https://www.prisma.io/docs/orm/prisma-schema/overview/generators#output-splitting-and-importing-types
+  /// https://www.prisma.io/blog/why-prisma-orm-generates-code-into-node-modules-and-why-it-ll-change
+  /// https://www.prisma.io/blog/rust-free-prisma-orm-is-ready-for-production
+  /// https://github.com/prisma/prisma/releases/tag/6.6.0
+  /// https://github.com/prisma/prisma/releases/tag/6.16.0
+  /// ESM-first
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  /// https://www.prisma.io/docs/orm/reference/preview-features/client-preview-features#currently-active-preview-features
+  /// https://github.com/prisma/prisma/releases/tag/5.7.0
+  previewFeatures     = ["nativeDistinct", "relationJoins"]
+  engineType          = "client"
+  /// https://github.com/prisma/prisma/releases/tag/7.3.0
+  /// default: "fast"; alternativ: "small"
+  /// compilerBuild = "fast"
+  /// https://github.com/prisma/prisma/releases/tag/6.12.0
+  // importFileExtension = "ts"
+}
+
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#datasource
+datasource db {
+  provider = "postgresql"
+  schemas  = ["cafe"]
+}
+
+model Cafe {
+  id              Int       @id @default(autoincrement())
+  version         Int       @default(0)
+  name            String
+  email           String    @unique
+  kategorie       Int
+  gruendungsdatum DateTime  @db.Date
+  /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#json
+  kaffeesorten    Kaffeeart[]
+  username        String?
+  erzeugt         DateTime  @default(now()) @db.Timestamp(6)
+  /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#updatedat
+  aktualisiert    DateTime  @default(now()) @db.Timestamp(6) @updatedAt
+  cafeManager     CafeManager?
+  produkte        Produkt[]
+
+  @@map("cafe")
+  @@schema("cafe")
+}
+
+model CafeManager {
+  id      Int    @id @default(autoincrement())
+  vorname String
+  nachname String
+  cafeId  Int    @unique @map("cafe_id")
+  cafe    Cafe   @relation(fields: [cafeId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([cafeId])
+  @@map("cafe_manager")
+  @@schema("cafe")
+}
+
+model Produkt {
+  id       Int     @id @default(autoincrement())
+  name     String
+  /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#decimal
+  preis    Decimal @db.Decimal(10, 2)
+  waehrung String
+  cafeId   Int     @map("cafe_id")
+  cafe     Cafe    @relation(fields: [cafeId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([cafeId])
+  @@map("produkt")
+  @@schema("cafe")
+}
+
+/// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#enum
+enum Kaffeeart {
+  ESPRESSO
+  CAPPUCCINO
+  LATTE_MACCHIATO
+  AMERICANO
+  FLAT_WHITE
+  COLD_BREW
+  MATCHA
+
+  @@map("kaffeeart")
+  @@schema("cafe")
+}
