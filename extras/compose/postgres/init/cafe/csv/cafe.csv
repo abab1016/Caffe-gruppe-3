@@ -5,3 +5,4 @@ id;version;name;email;kategorie;gruendungsdatum;kaffeeart;bewertung;geoeffnet;le
 40;0;CafeHamburg;cafehamburg@cafe.de;6;2025-04-20;AMERICANO;3.90;false;;"[""AMERICANO""]";cafehamburg;2025-04-20 00:00:00;2025-04-20 00:00:00
 50;0;CafeCologne;cologne@cafe.de;8;2025-05-05;FLAT_WHITE;4.50;true;2024-11-10;"[""ESPRESSO"",""FLAT_WHITE""]";cologne;2025-05-05 00:00:00;2025-05-05 00:00:00
 60;0;CafeFrankfurt;frankfurt@cafe.de;4;2025-06-01;;3.50;true;;;frankfurt;2025-06-01 00:00:00;2025-06-01 00:00:00
+70;0;CafeStuttgart;stuttgart@cafe.de;3;2025-07-01;COLD_BREW;4.10;true;2025-03-01;"[""COLD_BREW"",""AMERICANO""]";stuttgart;2025-07-01 00:00:00;2025-07-01 00:00:00

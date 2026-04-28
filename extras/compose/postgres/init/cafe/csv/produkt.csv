@@ -11,3 +11,5 @@ id;name;preis;waehrung;cafe_id
 51;Espresso Doppio;3.00;EUR;50
 60;Milchkaffee;3.30;EUR;60
 61;Kakao;2.90;EUR;60
+70;Cold Brew Large;4.50;EUR;70
+71;Nitro Cold Brew;5.00;EUR;70
