@@ -45,21 +45,24 @@ model Produkt {
 }
 
 model Cafe {
-  id              Int          @id @default(autoincrement())
-  version         Int          @default(0)
-  name            String
-  email           String       @unique
-  username        String?
-  kategorie       Int
-  kaffeeart       Kaffeeart?
-  gruendungsdatum DateTime     @db.Date
+  id                Int          @id @default(autoincrement())
+  version           Int          @default(0)
+  name              String
+  email             String       @unique
+  username          String?
+  kategorie         Int
+  kaffeeart         Kaffeeart?
+  bewertung         Decimal      @db.Decimal(3, 2)
+  geoeffnet         Boolean      @default(true)
+  gruendungsdatum   DateTime     @db.Date
+  letzteRenovierung DateTime?    @db.Date @map("letzte_renovierung")
   /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#json
-  kaffeesorten    Json?
-  erzeugt         DateTime     @default(now()) @db.Timestamp(6)
+  kaffeesorten      Json?
+  erzeugt           DateTime     @default(now()) @db.Timestamp(6)
   /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#updatedat
-  aktualisiert    DateTime     @default(now()) @db.Timestamp(6) @updatedAt
-  produkte        Produkt[]
-  cafeManager     CafeManager?
+  aktualisiert      DateTime     @default(now()) @db.Timestamp(6) @updatedAt
+  produkte          Produkt[]
+  cafeManager       CafeManager?
 
   @@map("cafe")
   @@schema("cafe")
