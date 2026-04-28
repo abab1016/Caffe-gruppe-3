@@ -30,10 +30,10 @@ entity "Cafe" {
   * name: text
   * email: text <<unique>>
   * kategorie: integer
+  * gruendungsdatum: date
     kaffeeart: text
   * bewertung: decimal
   * geoeffnet: boolean
-  * gruendungsdatum: date
     letzte_renovierung: date
     kaffeesorten: json
     username: text

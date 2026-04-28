@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS cafe (
                   -- https://www.postgresql.org/docs/current/datatype-enum.html
     kaffeeart          kaffeeart,
                   -- https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-NUMERIC-DECIMAL
+                  -- 3 Stellen, davon 2 Nachkommastellen
     bewertung          decimal(3,2) NOT NULL,
                   -- https://www.postgresql.org/docs/current/datatype-boolean.html
     geoeffnet          boolean NOT NULL DEFAULT true,

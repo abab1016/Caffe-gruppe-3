@@ -49,15 +49,15 @@ model Cafe {
   version           Int          @default(0)
   name              String
   email             String       @unique
-  username          String?
   kategorie         Int
+  gruendungsdatum   DateTime     @db.Date
   kaffeeart         Kaffeeart?
   bewertung         Decimal      @db.Decimal(3, 2)
   geoeffnet         Boolean      @default(true)
-  gruendungsdatum   DateTime     @db.Date
   letzteRenovierung DateTime?    @db.Date @map("letzte_renovierung")
   /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#json
   kaffeesorten      Json?
+  username          String?
   erzeugt           DateTime     @default(now()) @db.Timestamp(6)
   /// https://www.prisma.io/docs/orm/reference/prisma-schema-reference#updatedat
   aktualisiert      DateTime     @default(now()) @db.Timestamp(6) @updatedAt
